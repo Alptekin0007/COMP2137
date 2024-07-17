@@ -101,4 +101,5 @@ usermod -aG sudo dennis
 print_msg "Sudo access granted to dennis"
 
 # Ensure idempotency
-print_msg "Script execution complete. All configurations are up to date."
+print_msg "Script execution complete. This script created by ZAMIR AZIMOV."
+
