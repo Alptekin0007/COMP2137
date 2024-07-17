@@ -2,7 +2,7 @@
 
 # Function to print messages
 print_msg() {
-    echo -e "\n======== $1 ========"
+    echo -e "\n************ $1 ************"
 }
 
 # Function to check and install software packages
@@ -59,8 +59,9 @@ print_msg "squid started"
 
 # Configure UFW firewall
 print_msg "Configuring UFW firewall"
-sudo apt install ufw
+sudo apt install ufw -y
 ufw allow in on eth0 to any port 22
+ufw allow in on eth1 to any port 22
 ufw allow in on eth0 to any port 80
 ufw allow in on eth0 to any port 3128
 ufw allow in on eth1 to any port 80
