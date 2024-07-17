@@ -1,0 +1,986 @@
+---Host/Student info----
+
+Running on Wed 17 Jul 2024 11:24:49 AM EDT
+Run by zamir - () on host
+ Static hostname: pc200560007
+      Machine ID: 0732459b9b0849ef8c2d7e1cfc0602de
+Operating System: Ubuntu 22.04.4 LTS
+23454e7f1c80da61b69217db1155bf18  ./check-assign2-script.sh - 23454e7f1c80da61b69217db1155bf18  -
+------------------------
+
+---Start of Assignment2.sh Check------
+---Running makecontainers.sh----------
+This script performs many tasks. Please be patient
+To see more about what it is doing as it does it, use the --verbose option
+Network lan deleted
+Network mgmt deleted
+Network lan created
+Network mgmt created
+Launching openwrt
+Retrieving image: Unpack: 100% (860.96MB/s)                                            Retrieving image: Unpack: 100% (860.96MB/s)                                            Launching server1
+Retrieving image: Unpack: 100% (1.58GB/s)                                          Retrieving image: Unpack: 100% (1.58GB/s)                                          You may ignore any messages about Open vSwitch
+Selecting previously unselected package openssh-sftp-server.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 16298 files and directories currently installed.)
+Preparing to unpack .../0-openssh-sftp-server_1%3a8.9p1-3ubuntu0.10_amd64.deb ...
+Unpacking openssh-sftp-server (1:8.9p1-3ubuntu0.10) ...
+Selecting previously unselected package libwrap0:amd64.
+Preparing to unpack .../1-libwrap0_7.6.q-31build2_amd64.deb ...
+Unpacking libwrap0:amd64 (7.6.q-31build2) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../2-openssh-server_1%3a8.9p1-3ubuntu0.10_amd64.deb ...
+Unpacking openssh-server (1:8.9p1-3ubuntu0.10) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../3-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../4-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../5-wget_1.21.2-2ubuntu1.1_amd64.deb ...
+Unpacking wget (1.21.2-2ubuntu1.1) ...
+Selecting previously unselected package ncurses-term.
+Preparing to unpack .../6-ncurses-term_6.3-2ubuntu0.1_all.deb ...
+Unpacking ncurses-term (6.3-2ubuntu0.1) ...
+Selecting previously unselected package python3-distro.
+Preparing to unpack .../7-python3-distro_1.7.0-1_all.deb ...
+Unpacking python3-distro (1.7.0-1) ...
+Selecting previously unselected package ssh-import-id.
+Preparing to unpack .../8-ssh-import-id_5.11-0ubuntu1_all.deb ...
+Unpacking ssh-import-id (5.11-0ubuntu1) ...
+Setting up openssh-sftp-server (1:8.9p1-3ubuntu0.10) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up python3-distro (1.7.0-1) ...
+Setting up wget (1.21.2-2ubuntu1.1) ...
+Setting up ssh-import-id (5.11-0ubuntu1) ...
+Setting up libwrap0:amd64 (7.6.q-31build2) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up ncurses-term (6.3-2ubuntu0.1) ...
+Setting up openssh-server (1:8.9p1-3ubuntu0.10) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:egjj+r2Y18iqV7MJodqYbUswEQQLdl4wFdQvaQOlJik root@server1 (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:60kkwJyofmCyh87S0m/2sQ7RP75rcLiVEXiopARrNZ8 root@server1 (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:noDWHwXzb4tkcgJPUjuNqTNj9KQeg63Fywbbg2vuDDw root@server1 (ED25519)
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+ssh.socket is a disabled or a static unit, not starting it.
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Pushing /home/zamir/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (171.28MB/s)                                                                                                    Waiting for server1 reboot
+# Host server1-mgmt found: line 5
+/home/zamir/.ssh/known_hosts updated.
+Original contents retained as /home/zamir/.ssh/known_hosts.old
+---Retrieving assignment2.sh script---
+Retrieved assignment2 script
+Copied assignment2.sh script to server1
+---assignment2.sh run----
+
+************ Configuring network interface ************
+
+************ Network interface configured ************
+
+************ Updating /etc/hosts ************
+
+************ /etc/hosts updated ************
+
+************ Installing apache2 and squid ************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 file libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libbrotli1 libcurl4 libgdbm-compat4
+  libgdbm6 libjansson4 libldap-2.5-0 libldap-common liblua5.3-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.34 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 mailcap mime-support perl perl-modules-5.34
+  ssl-cert xz-utils
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser ufw
+  bzip2-doc gdbm-l10n libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+  libsasl2-modules-sql perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libbrotli1 libcurl4
+  libgdbm-compat4 libgdbm6 libjansson4 libldap-2.5-0 libldap-common
+  liblua5.3-0 libmagic-mgc libmagic1 libnghttp2-14 libperl5.34 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4 mailcap
+  mime-support perl perl-modules-5.34 ssl-cert xz-utils
+0 upgraded, 33 newly installed, 0 to remove and 0 not upgraded.
+Need to get 12.0 MB of archives.
+After this operation, 68.5 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.3 [2,976 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6,606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.3 [4,820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.3 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1 amd64 1.7.0-8ubuntu0.22.04.1 [108 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4.22.04.2 [92.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4.22.04.2 [11.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.18+dfsg-0ubuntu0.22.04.1 [183 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4.22.04.2 [9,170 B]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnghttp2-14 amd64 1.43.0-1ubuntu0.2 [76.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssh-4 amd64 0.9.6-2ubuntu0.22.04.3 [186 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.16 [290 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjansson4 amd64 2.13.1-1.1build3 [32.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.11 [1,349 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.11 [165 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.11 [89.2 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3,696 B]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.11 [97.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic-mgc amd64 1:5.41-3ubuntu0.1 [257 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic1 amd64 1:5.41-3ubuntu0.1 [87.2 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 file amd64 1:5.41-3ubuntu0.1 [21.5 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy/main amd64 xz-utils amd64 5.2.5-2ubuntu1 [84.8 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.18+dfsg-0ubuntu0.22.04.1 [15.9 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1.2 [68.8 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+Fetched 12.0 MB in 2s (6,571 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19226 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.3_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.3) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.3_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.3_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.3) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../05-libapr1_1.7.0-8ubuntu0.22.04.1_amd64.deb ...
+Unpacking libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../06-libaprutil1_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../07-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../08-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../09-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../10-libldap-2.5-0_2.5.18+dfsg-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../11-libaprutil1-ldap_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../12-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../13-libnghttp2-14_1.43.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1ubuntu0.2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../14-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../15-libssh-4_0.9.6-2ubuntu0.22.04.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2ubuntu0.22.04.3) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../16-libcurl4_7.81.0-1ubuntu1.16_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.16) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../17-libjansson4_2.13.1-1.1build3_amd64.deb ...
+Unpacking libjansson4:amd64 (2.13.1-1.1build3) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../18-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../19-apache2-bin_2.4.52-1ubuntu4.11_amd64.deb ...
+Unpacking apache2-bin (2.4.52-1ubuntu4.11) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../20-apache2-data_2.4.52-1ubuntu4.11_all.deb ...
+Unpacking apache2-data (2.4.52-1ubuntu4.11) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../21-apache2-utils_2.4.52-1ubuntu4.11_amd64.deb ...
+Unpacking apache2-utils (2.4.52-1ubuntu4.11) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../22-mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../23-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../24-apache2_2.4.52-1ubuntu4.11_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.11) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../25-libmagic-mgc_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking libmagic-mgc (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../26-libmagic1_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../27-file_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking file (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../28-xz-utils_5.2.5-2ubuntu1_amd64.deb ...
+Unpacking xz-utils (5.2.5-2ubuntu1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../29-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../30-libldap-common_2.5.18+dfsg-0ubuntu0.22.04.1_all.deb ...
+Unpacking libldap-common (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../31-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../32-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Setting up libmagic-mgc (1:5.41-3ubuntu0.1) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1ubuntu0.2) ...
+Setting up libmagic1:amd64 (1:5.41-3ubuntu0.1) ...
+Setting up libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Setting up file (1:5.41-3ubuntu0.1) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.3) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up libldap-common (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Setting up libjansson4:amd64 (2.13.1-1.1build3) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up ssl-cert (1.1.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up xz-utils (5.2.5-2ubuntu1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libssh-4:amd64 (0.9.6-2ubuntu0.22.04.3) ...
+Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+Setting up apache2-data (2.4.52-1ubuntu4.11) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.16) ...
+Setting up apache2-utils (2.4.52-1ubuntu4.11) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.3) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up perl (5.34.0-3ubuntu1.3) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Setting up mime-support (3.66) ...
+Setting up apache2-bin (2.4.52-1ubuntu4.11) ...
+Setting up apache2 (2.4.52-1ubuntu4.11) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+
+************ apache2 installed ************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdbi-perl libecap3 libltdl7 libnetfilter-conntrack3 libnfnetlink0 libtdb1
+  squid-common squid-langpack
+Suggested packages:
+  libclone-perl libmldbm-perl libnet-daemon-perl libsql-statement-perl
+  squidclient squid-cgi squid-purge resolvconf smbclient ufw winbind apparmor
+The following NEW packages will be installed:
+  libdbi-perl libecap3 libltdl7 libnetfilter-conntrack3 libnfnetlink0 libtdb1
+  squid squid-common squid-langpack
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,955 kB of archives.
+After this operation, 15.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libecap3 amd64 1.0.1-3.2ubuntu4 [17.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libltdl7 amd64 2.4.6-15build2 [39.6 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnfnetlink0 amd64 1.0.1-3build3 [14.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnetfilter-conntrack3 amd64 1.0.9-1 [45.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtdb1 amd64 1.4.5-2build1 [46.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 squid-langpack all 20200403-1 [170 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 squid-common all 5.9-0ubuntu0.22.04.1 [204 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdbi-perl amd64 1.643-3build3 [741 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 squid amd64 5.9-0ubuntu0.22.04.1 [2,678 kB]
+Fetched 3,955 kB in 1s (3,269 kB/s)
+Selecting previously unselected package libecap3:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22152 files and directories currently installed.)
+Preparing to unpack .../0-libecap3_1.0.1-3.2ubuntu4_amd64.deb ...
+Unpacking libecap3:amd64 (1.0.1-3.2ubuntu4) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../1-libltdl7_2.4.6-15build2_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-15build2) ...
+Selecting previously unselected package libnfnetlink0:amd64.
+Preparing to unpack .../2-libnfnetlink0_1.0.1-3build3_amd64.deb ...
+Unpacking libnfnetlink0:amd64 (1.0.1-3build3) ...
+Selecting previously unselected package libnetfilter-conntrack3:amd64.
+Preparing to unpack .../3-libnetfilter-conntrack3_1.0.9-1_amd64.deb ...
+Unpacking libnetfilter-conntrack3:amd64 (1.0.9-1) ...
+Selecting previously unselected package libtdb1:amd64.
+Preparing to unpack .../4-libtdb1_1.4.5-2build1_amd64.deb ...
+Unpacking libtdb1:amd64 (1.4.5-2build1) ...
+Selecting previously unselected package squid-langpack.
+Preparing to unpack .../5-squid-langpack_20200403-1_all.deb ...
+Unpacking squid-langpack (20200403-1) ...
+Selecting previously unselected package squid-common.
+Preparing to unpack .../6-squid-common_5.9-0ubuntu0.22.04.1_all.deb ...
+Unpacking squid-common (5.9-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libdbi-perl:amd64.
+Preparing to unpack .../7-libdbi-perl_1.643-3build3_amd64.deb ...
+Unpacking libdbi-perl:amd64 (1.643-3build3) ...
+Selecting previously unselected package squid.
+Preparing to unpack .../8-squid_5.9-0ubuntu0.22.04.1_amd64.deb ...
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+Unpacking squid (5.9-0ubuntu0.22.04.1) ...
+Setting up libtdb1:amd64 (1.4.5-2build1) ...
+Setting up squid-langpack (20200403-1) ...
+Setting up libltdl7:amd64 (2.4.6-15build2) ...
+Setting up libnfnetlink0:amd64 (1.0.1-3build3) ...
+Setting up libdbi-perl:amd64 (1.643-3build3) ...
+Setting up libecap3:amd64 (1.0.1-3.2ubuntu4) ...
+Setting up squid-common (5.9-0ubuntu0.22.04.1) ...
+Setting up libnetfilter-conntrack3:amd64 (1.0.9-1) ...
+Setting up squid (5.9-0ubuntu0.22.04.1) ...
+Setcap worked! /usr/lib/squid/pinger is not suid!
+Created symlink /etc/systemd/system/multi-user.target.wants/squid.service → /lib/systemd/system/squid.service.
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+
+************ squid installed ************
+
+************ apache2 started ************
+
+************ squid started ************
+
+************ Configuring UFW firewall ************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  iptables libip6tc2 libnftnl11
+Suggested packages:
+  firewalld nftables
+The following NEW packages will be installed:
+  iptables libip6tc2 libnftnl11 ufw
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 704 kB of archives.
+After this operation, 4,072 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libip6tc2 amd64 1.8.7-1ubuntu5.2 [20.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnftnl11 amd64 1.2.1-1build1 [65.5 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 iptables amd64 1.8.7-1ubuntu5.2 [455 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ufw all 0.36.1-4ubuntu0.1 [162 kB]
+Fetched 704 kB in 0s (2,786 kB/s)
+Selecting previously unselected package libip6tc2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24671 files and directories currently installed.)
+Preparing to unpack .../libip6tc2_1.8.7-1ubuntu5.2_amd64.deb ...
+Unpacking libip6tc2:amd64 (1.8.7-1ubuntu5.2) ...
+Selecting previously unselected package libnftnl11:amd64.
+Preparing to unpack .../libnftnl11_1.2.1-1build1_amd64.deb ...
+Unpacking libnftnl11:amd64 (1.2.1-1build1) ...
+Selecting previously unselected package iptables.
+Preparing to unpack .../iptables_1.8.7-1ubuntu5.2_amd64.deb ...
+Unpacking iptables (1.8.7-1ubuntu5.2) ...
+Selecting previously unselected package ufw.
+Preparing to unpack .../ufw_0.36.1-4ubuntu0.1_all.deb ...
+Unpacking ufw (0.36.1-4ubuntu0.1) ...
+Setting up libip6tc2:amd64 (1.8.7-1ubuntu5.2) ...
+Setting up libnftnl11:amd64 (1.2.1-1build1) ...
+Setting up iptables (1.8.7-1ubuntu5.2) ...
+update-alternatives: using /usr/sbin/iptables-legacy to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-legacy to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/iptables-nft to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-nft to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/arptables-nft to provide /usr/sbin/arptables (arptables) in auto mode
+update-alternatives: using /usr/sbin/ebtables-nft to provide /usr/sbin/ebtables (ebtables) in auto mode
+Setting up ufw (0.36.1-4ubuntu0.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+
+Creating config file /etc/ufw/before.rules with new version
+
+Creating config file /etc/ufw/before6.rules with new version
+
+Creating config file /etc/ufw/after.rules with new version
+
+Creating config file /etc/ufw/after6.rules with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/ufw.service → /lib/systemd/system/ufw.service.
+Processing triggers for rsyslog (8.2112.0-2ubuntu2.2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Firewall is active and enabled on system startup
+
+************ UFW firewall configured ************
+
+************ Creating user accounts ************
+
+************ User dennis created ************
+
+************ User aubrey created ************
+
+************ User captain created ************
+
+************ User snibbles created ************
+
+************ User brownie created ************
+
+************ User scooter created ************
+
+************ User sandy created ************
+
+************ User perrier created ************
+
+************ User cindy created ************
+
+************ User tiger created ************
+
+************ User yoda created ************
+
+************ Configuring ssh keys and sudo access ************
+
+************ SSH key added for dennis ************
+
+************ Sudo access granted to dennis ************
+
+************ Script execution complete. All configurations are up to date. ************
+-------------------------
+
+--network--------
+/etc/hosts
+-----------------------
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+
+10.184.154.1.200 openwrt
+192.168.16.21 server1
+-------------
+/etc/netplan/01-netcfg.yaml
+-----------------------
+network:
+  version: 2
+  ethernets:
+    eth1:
+      addresses: [192.168.16.21/24]
+-------------
+/etc/netplan/10-lxc.yaml
+-----------------------
+network:
+    version: 2
+    ethernets:
+        eth0:
+            addresses: [192.168.16.200/24]
+            routes:
+              - to: default
+                via: 192.168.16.2
+            nameservers:
+                addresses: [192.168.16.2]
+                search: [home.arpa, localdomain]
+        eth1:
+            addresses: [172.16.1.200/24]
+-------------
+---applying netplan---
+---ip a---------------
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+69: eth0@if70: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:5a:cc:65 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.16.200/24 brd 192.168.16.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::216:3eff:fe5a:cc65/64 scope link 
+       valid_lft forever preferred_lft forever
+71: eth1@if72: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:2d:31:92 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.16.21/24 brd 192.168.16.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet 172.16.1.200/24 brd 172.16.1.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::216:3eff:fe2d:3192/64 scope link 
+       valid_lft forever preferred_lft forever
+--ip r----------------
+default via 192.168.16.2 dev eth0 proto static 
+172.16.1.0/24 dev eth1 proto kernel scope link src 172.16.1.200 
+192.168.16.0/24 dev eth0 proto kernel scope link src 192.168.16.200 
+192.168.16.0/24 dev eth1 proto kernel scope link src 192.168.16.21 
+----------------------
+
+---services status------
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Wed 2024-07-17 15:27:12 UTC; 9s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 1356 (apache2)
+      Tasks: 55 (limit: 4554)
+     Memory: 5.2M
+        CPU: 26ms
+     CGroup: /system.slice/apache2.service
+             ├─1356 /usr/sbin/apache2 -k start
+             ├─1357 /usr/sbin/apache2 -k start
+             └─1359 /usr/sbin/apache2 -k start
+
+Jul 17 15:27:12 server1 systemd[1]: Starting The Apache HTTP Server...
+Jul 17 15:27:12 server1 apachectl[1355]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.21. Set the 'ServerName' directive globally to suppress this message
+Jul 17 15:27:12 server1 systemd[1]: Started The Apache HTTP Server.
+
+● squid.service - Squid Web Proxy Server
+     Loaded: loaded (/lib/systemd/system/squid.service; enabled; vendor preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Wed 2024-07-17 15:27:16 UTC; 5s ago
+       Docs: man:squid(8)
+   Main PID: 2390 (squid)
+      Tasks: 4 (limit: 4554)
+     Memory: 16.1M
+        CPU: 93ms
+     CGroup: /system.slice/squid.service
+             ├─2390 /usr/sbin/squid --foreground -sYC
+             ├─2392 "(squid-1)" --kid squid-1 --foreground -sYC
+             ├─2393 "(logfile-daemon)" /var/log/squid/access.log
+             └─2394 "(pinger)"
+
+Jul 17 15:27:16 server1 squid[2392]: Using Least Load store dir selection
+Jul 17 15:27:16 server1 squid[2392]: Set Current Directory to /var/spool/squid
+Jul 17 15:27:16 server1 squid[2392]: Finished loading MIME types and icons.
+Jul 17 15:27:16 server1 squid[2392]: HTCP Disabled.
+Jul 17 15:27:16 server1 squid[2392]: Pinger socket opened on FD 14
+Jul 17 15:27:16 server1 squid[2392]: Squid plugin modules loaded: 0
+Jul 17 15:27:16 server1 squid[2392]: Adaptation support is off.
+Jul 17 15:27:16 server1 squid[2392]: Accepting HTTP Socket connections at conn3 local=[::]:3128 remote=[::] FD 12 flags=9
+Jul 17 15:27:16 server1 systemd[1]: Started Squid Web Proxy Server.
+Jul 17 15:27:17 server1 squid[2392]: storeLateRelease: released 0 objects
+------------------------
+
+---ufw show added-------
+Added user rules (see 'ufw status' for running firewall):
+ufw allow in on eth0 to any port 22
+ufw allow in on eth1 to any port 22
+ufw allow in on eth0 to any port 80
+ufw allow in on eth0 to any port 3128
+ufw allow in on eth1 to any port 80
+ufw allow in on eth1 to any port 3128
+---ufw show status------
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22 on eth0                 ALLOW       Anywhere                  
+22 on eth1                 ALLOW       Anywhere                  
+80 on eth0                 ALLOW       Anywhere                  
+3128 on eth0               ALLOW       Anywhere                  
+80 on eth1                 ALLOW       Anywhere                  
+3128 on eth1               ALLOW       Anywhere                  
+22 (v6) on eth0            ALLOW       Anywhere (v6)             
+22 (v6) on eth1            ALLOW       Anywhere (v6)             
+80 (v6) on eth0            ALLOW       Anywhere (v6)             
+3128 (v6) on eth0          ALLOW       Anywhere (v6)             
+80 (v6) on eth1            ALLOW       Anywhere (v6)             
+3128 (v6) on eth1          ALLOW       Anywhere (v6)             
+
+------------------------
+
+---getents--------------------
+aubrey:x:1002:1003::/home/aubrey:/bin/bash
+captain:x:1003:1004::/home/captain:/bin/bash
+snibbles:x:1004:1005::/home/snibbles:/bin/bash
+brownie:x:1005:1006::/home/brownie:/bin/bash
+scooter:x:1006:1007::/home/scooter:/bin/bash
+sandy:x:1007:1008::/home/sandy:/bin/bash
+perrier:x:1008:1009::/home/perrier:/bin/bash
+cindy:x:1009:1010::/home/cindy:/bin/bash
+tiger:x:1010:1011::/home/tiger:/bin/bash
+yoda:x:1011:1012::/home/yoda:/bin/bash
+dennis:x:1001:1002::/home/dennis:/bin/bash
+sudo:x:27:ubuntu,dennis
+---user home dir contents-----
+  2131480      4 -rw-r--r--   1 perrier  perrier       220 Jan  6  2022 /home/perrier/.bash_logout
+  2131481      4 -rw-r--r--   1 perrier  perrier      3771 Jan  6  2022 /home/perrier/.bashrc
+  2131482      4 -rw-r--r--   1 perrier  perrier       807 Jan  6  2022 /home/perrier/.profile
+  2128481      4 -rw-r--r--   1 aubrey   aubrey        220 Jan  6  2022 /home/aubrey/.bash_logout
+  2128488      4 -rw-r--r--   1 aubrey   aubrey       3771 Jan  6  2022 /home/aubrey/.bashrc
+  2128507      4 -rw-r--r--   1 aubrey   aubrey        807 Jan  6  2022 /home/aubrey/.profile
+  2131434      4 -rw-r--r--   1 brownie  brownie       220 Jan  6  2022 /home/brownie/.bash_logout
+  2131467      4 -rw-r--r--   1 brownie  brownie      3771 Jan  6  2022 /home/brownie/.bashrc
+  2131468      4 -rw-r--r--   1 brownie  brownie       807 Jan  6  2022 /home/brownie/.profile
+  2131043      4 -rw-r--r--   1 captain  captain       220 Jan  6  2022 /home/captain/.bash_logout
+  2131427      4 -rw-r--r--   1 captain  captain      3771 Jan  6  2022 /home/captain/.bashrc
+  2131428      4 -rw-r--r--   1 captain  captain       807 Jan  6  2022 /home/captain/.profile
+  2122171      4 -rwxr-xr-x   1 root     remoteadmin     2831 Jul 17 15:27 /home/remoteadmin/assignment2.sh
+  2122184      4 -rw-r--r--   1 root     remoteadmin      220 Jan  6  2022 /home/remoteadmin/.bash_logout
+  2122136      0 -rw-r--r--   1 root     root               0 Jul 17 15:27 /home/remoteadmin/.cache/motd.legal-displayed
+  2120854      4 -rw-------   1 root     root              99 Jul 17 15:26 /home/remoteadmin/.ssh/authorized_keys
+  2120850      4 -rw-r--r--   1 root     remoteadmin       99 Jul 17 15:26 /home/remoteadmin/.ssh/id_ed25519.pub
+  2122185      4 -rw-r--r--   1 root     remoteadmin     3771 Jan  6  2022 /home/remoteadmin/.bashrc
+  2122186      4 -rw-r--r--   1 root     remoteadmin      807 Jan  6  2022 /home/remoteadmin/.profile
+  2131472      4 -rw-r--r--   1 scooter  scooter          220 Jan  6  2022 /home/scooter/.bash_logout
+  2131473      4 -rw-r--r--   1 scooter  scooter         3771 Jan  6  2022 /home/scooter/.bashrc
+  2131474      4 -rw-r--r--   1 scooter  scooter          807 Jan  6  2022 /home/scooter/.profile
+  2131492      4 -rw-r--r--   1 yoda     yoda             220 Jan  6  2022 /home/yoda/.bash_logout
+  2131493      4 -rw-r--r--   1 yoda     yoda            3771 Jan  6  2022 /home/yoda/.bashrc
+  2131494      4 -rw-r--r--   1 yoda     yoda             807 Jan  6  2022 /home/yoda/.profile
+  2131488      4 -rw-r--r--   1 tiger    tiger            220 Jan  6  2022 /home/tiger/.bash_logout
+  2131489      4 -rw-r--r--   1 tiger    tiger           3771 Jan  6  2022 /home/tiger/.bashrc
+  2131490      4 -rw-r--r--   1 tiger    tiger            807 Jan  6  2022 /home/tiger/.profile
+  2103101      4 -rw-r--r--   1 ubuntu   ubuntu           220 Jan  6  2022 /home/ubuntu/.bash_logout
+  2103102      4 -rw-r--r--   1 ubuntu   ubuntu          3771 Jan  6  2022 /home/ubuntu/.bashrc
+  2103103      4 -rw-r--r--   1 ubuntu   ubuntu           807 Jan  6  2022 /home/ubuntu/.profile
+  2128441      4 -rw-r--r--   1 dennis   dennis           220 Jan  6  2022 /home/dennis/.bash_logout
+  2122187      4 -rw-------   1 dennis   dennis           100 Jul 17 15:27 /home/dennis/.ssh/authorized_keys
+  2128444      4 -rw-r--r--   1 dennis   dennis          3771 Jan  6  2022 /home/dennis/.bashrc
+  2128445      4 -rw-r--r--   1 dennis   dennis           807 Jan  6  2022 /home/dennis/.profile
+  2131476      4 -rw-r--r--   1 sandy    sandy            220 Jan  6  2022 /home/sandy/.bash_logout
+  2131477      4 -rw-r--r--   1 sandy    sandy           3771 Jan  6  2022 /home/sandy/.bashrc
+  2131478      4 -rw-r--r--   1 sandy    sandy            807 Jan  6  2022 /home/sandy/.profile
+  2131430      4 -rw-r--r--   1 snibbles snibbles         220 Jan  6  2022 /home/snibbles/.bash_logout
+  2131431      4 -rw-r--r--   1 snibbles snibbles        3771 Jan  6  2022 /home/snibbles/.bashrc
+  2131432      4 -rw-r--r--   1 snibbles snibbles         807 Jan  6  2022 /home/snibbles/.profile
+  2131484      4 -rw-r--r--   1 cindy    cindy            220 Jan  6  2022 /home/cindy/.bash_logout
+  2131485      4 -rw-r--r--   1 cindy    cindy           3771 Jan  6  2022 /home/cindy/.bashrc
+  2131486      4 -rw-r--r--   1 cindy    cindy            807 Jan  6  2022 /home/cindy/.profile
+/home/dennis/.ssh/authorized_keys
+-----------------------
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG4rT3vTt99Ox5kndS4HmgTrKBT8SKzhK4rhGkEVGlCI student@generic-vm
+-------------
+/home/remoteadmin/.ssh/authorized_keys
+-----------------------
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILdHjp4NhZvKXRmBUWBeai8iwaZQJkZbDOCWXn4UdCbi zamir@pc200560007
+-------------
+------------------------------
+
+---assignment2.sh rerun--------------------------------------------------------------------
+
+************ Configuring network interface ************
+
+************ Network interface already configured ************
+
+************ Updating /etc/hosts ************
+
+************ /etc/hosts already updated ************
+
+************ Installing apache2 and squid ************
+
+************ apache2 already installed ************
+
+************ squid already installed ************
+
+************ apache2 started ************
+
+************ squid started ************
+
+************ Configuring UFW firewall ************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ufw is already the newest version (0.36.1-4ubuntu0.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Firewall is active and enabled on system startup
+
+************ UFW firewall configured ************
+
+************ Creating user accounts ************
+
+************ User dennis already exists ************
+
+************ User aubrey already exists ************
+
+************ User captain already exists ************
+
+************ User snibbles already exists ************
+
+************ User brownie already exists ************
+
+************ User scooter already exists ************
+
+************ User sandy already exists ************
+
+************ User perrier already exists ************
+
+************ User cindy already exists ************
+
+************ User tiger already exists ************
+
+************ User yoda already exists ************
+
+************ Configuring ssh keys and sudo access ************
+
+************ SSH key added for dennis ************
+
+************ Sudo access granted to dennis ************
+
+************ Script execution complete. All configurations are up to date. ************
+-------------------------------------------------------------------------------------------
+
+--network--------
+/etc/hosts
+-----------------------
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+
+10.184.154.1.200 openwrt
+192.168.16.21 server1
+-------------
+/etc/netplan/01-netcfg.yaml
+-----------------------
+network:
+  version: 2
+  ethernets:
+    eth1:
+      addresses: [192.168.16.21/24]
+-------------
+/etc/netplan/10-lxc.yaml
+-----------------------
+network:
+    version: 2
+    ethernets:
+        eth0:
+            addresses: [192.168.16.200/24]
+            routes:
+              - to: default
+                via: 192.168.16.2
+            nameservers:
+                addresses: [192.168.16.2]
+                search: [home.arpa, localdomain]
+        eth1:
+            addresses: [172.16.1.200/24]
+-------------
+---applying netplan---
+---ip a---------------
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+69: eth0@if70: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:5a:cc:65 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.16.200/24 brd 192.168.16.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::216:3eff:fe5a:cc65/64 scope link 
+       valid_lft forever preferred_lft forever
+71: eth1@if72: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:2d:31:92 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.16.21/24 brd 192.168.16.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet 172.16.1.200/24 brd 172.16.1.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::216:3eff:fe2d:3192/64 scope link 
+       valid_lft forever preferred_lft forever
+--ip r----------------
+default via 192.168.16.2 dev eth0 proto static 
+172.16.1.0/24 dev eth1 proto kernel scope link src 172.16.1.200 
+192.168.16.0/24 dev eth1 proto kernel scope link src 192.168.16.21 
+192.168.16.0/24 dev eth0 proto kernel scope link src 192.168.16.200 
+----------------------
+
+---services status------
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Wed 2024-07-17 15:27:12 UTC; 13s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 1356 (apache2)
+      Tasks: 55 (limit: 4554)
+     Memory: 5.2M
+        CPU: 26ms
+     CGroup: /system.slice/apache2.service
+             ├─1356 /usr/sbin/apache2 -k start
+             ├─1357 /usr/sbin/apache2 -k start
+             └─1359 /usr/sbin/apache2 -k start
+
+Jul 17 15:27:12 server1 systemd[1]: Starting The Apache HTTP Server...
+Jul 17 15:27:12 server1 apachectl[1355]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.21. Set the 'ServerName' directive globally to suppress this message
+Jul 17 15:27:12 server1 systemd[1]: Started The Apache HTTP Server.
+
+● squid.service - Squid Web Proxy Server
+     Loaded: loaded (/lib/systemd/system/squid.service; enabled; vendor preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Wed 2024-07-17 15:27:16 UTC; 9s ago
+       Docs: man:squid(8)
+   Main PID: 2390 (squid)
+      Tasks: 4 (limit: 4554)
+     Memory: 16.1M
+        CPU: 93ms
+     CGroup: /system.slice/squid.service
+             ├─2390 /usr/sbin/squid --foreground -sYC
+             ├─2392 "(squid-1)" --kid squid-1 --foreground -sYC
+             ├─2393 "(logfile-daemon)" /var/log/squid/access.log
+             └─2394 "(pinger)"
+
+Jul 17 15:27:16 server1 squid[2392]: Using Least Load store dir selection
+Jul 17 15:27:16 server1 squid[2392]: Set Current Directory to /var/spool/squid
+Jul 17 15:27:16 server1 squid[2392]: Finished loading MIME types and icons.
+Jul 17 15:27:16 server1 squid[2392]: HTCP Disabled.
+Jul 17 15:27:16 server1 squid[2392]: Pinger socket opened on FD 14
+Jul 17 15:27:16 server1 squid[2392]: Squid plugin modules loaded: 0
+Jul 17 15:27:16 server1 squid[2392]: Adaptation support is off.
+Jul 17 15:27:16 server1 squid[2392]: Accepting HTTP Socket connections at conn3 local=[::]:3128 remote=[::] FD 12 flags=9
+Jul 17 15:27:16 server1 systemd[1]: Started Squid Web Proxy Server.
+Jul 17 15:27:17 server1 squid[2392]: storeLateRelease: released 0 objects
+------------------------
+
+---ufw show added-------
+Added user rules (see 'ufw status' for running firewall):
+ufw allow in on eth0 to any port 22
+ufw allow in on eth1 to any port 22
+ufw allow in on eth0 to any port 80
+ufw allow in on eth0 to any port 3128
+ufw allow in on eth1 to any port 80
+ufw allow in on eth1 to any port 3128
+---ufw show status------
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22 on eth0                 ALLOW       Anywhere                  
+22 on eth1                 ALLOW       Anywhere                  
+80 on eth0                 ALLOW       Anywhere                  
+3128 on eth0               ALLOW       Anywhere                  
+80 on eth1                 ALLOW       Anywhere                  
+3128 on eth1               ALLOW       Anywhere                  
+22 (v6) on eth0            ALLOW       Anywhere (v6)             
+22 (v6) on eth1            ALLOW       Anywhere (v6)             
+80 (v6) on eth0            ALLOW       Anywhere (v6)             
+3128 (v6) on eth0          ALLOW       Anywhere (v6)             
+80 (v6) on eth1            ALLOW       Anywhere (v6)             
+3128 (v6) on eth1          ALLOW       Anywhere (v6)             
+
+------------------------
+
+---getents--------------------
+aubrey:x:1002:1003::/home/aubrey:/bin/bash
+captain:x:1003:1004::/home/captain:/bin/bash
+snibbles:x:1004:1005::/home/snibbles:/bin/bash
+brownie:x:1005:1006::/home/brownie:/bin/bash
+scooter:x:1006:1007::/home/scooter:/bin/bash
+sandy:x:1007:1008::/home/sandy:/bin/bash
+perrier:x:1008:1009::/home/perrier:/bin/bash
+cindy:x:1009:1010::/home/cindy:/bin/bash
+tiger:x:1010:1011::/home/tiger:/bin/bash
+yoda:x:1011:1012::/home/yoda:/bin/bash
+dennis:x:1001:1002::/home/dennis:/bin/bash
+sudo:x:27:ubuntu,dennis
+---user home dir contents-----
+  2131480      4 -rw-r--r--   1 perrier  perrier       220 Jan  6  2022 /home/perrier/.bash_logout
+  2131481      4 -rw-r--r--   1 perrier  perrier      3771 Jan  6  2022 /home/perrier/.bashrc
+  2131482      4 -rw-r--r--   1 perrier  perrier       807 Jan  6  2022 /home/perrier/.profile
+  2128481      4 -rw-r--r--   1 aubrey   aubrey        220 Jan  6  2022 /home/aubrey/.bash_logout
+  2128488      4 -rw-r--r--   1 aubrey   aubrey       3771 Jan  6  2022 /home/aubrey/.bashrc
+  2128507      4 -rw-r--r--   1 aubrey   aubrey        807 Jan  6  2022 /home/aubrey/.profile
+  2131434      4 -rw-r--r--   1 brownie  brownie       220 Jan  6  2022 /home/brownie/.bash_logout
+  2131467      4 -rw-r--r--   1 brownie  brownie      3771 Jan  6  2022 /home/brownie/.bashrc
+  2131468      4 -rw-r--r--   1 brownie  brownie       807 Jan  6  2022 /home/brownie/.profile
+  2131043      4 -rw-r--r--   1 captain  captain       220 Jan  6  2022 /home/captain/.bash_logout
+  2131427      4 -rw-r--r--   1 captain  captain      3771 Jan  6  2022 /home/captain/.bashrc
+  2131428      4 -rw-r--r--   1 captain  captain       807 Jan  6  2022 /home/captain/.profile
+  2122171      4 -rwxr-xr-x   1 root     remoteadmin     2831 Jul 17 15:27 /home/remoteadmin/assignment2.sh
+  2122184      4 -rw-r--r--   1 root     remoteadmin      220 Jan  6  2022 /home/remoteadmin/.bash_logout
+  2122136      0 -rw-r--r--   1 root     root               0 Jul 17 15:27 /home/remoteadmin/.cache/motd.legal-displayed
+  2120854      4 -rw-------   1 root     root              99 Jul 17 15:26 /home/remoteadmin/.ssh/authorized_keys
+  2120850      4 -rw-r--r--   1 root     remoteadmin       99 Jul 17 15:26 /home/remoteadmin/.ssh/id_ed25519.pub
+  2122185      4 -rw-r--r--   1 root     remoteadmin     3771 Jan  6  2022 /home/remoteadmin/.bashrc
+  2122186      4 -rw-r--r--   1 root     remoteadmin      807 Jan  6  2022 /home/remoteadmin/.profile
+  2131472      4 -rw-r--r--   1 scooter  scooter          220 Jan  6  2022 /home/scooter/.bash_logout
+  2131473      4 -rw-r--r--   1 scooter  scooter         3771 Jan  6  2022 /home/scooter/.bashrc
+  2131474      4 -rw-r--r--   1 scooter  scooter          807 Jan  6  2022 /home/scooter/.profile
+  2131492      4 -rw-r--r--   1 yoda     yoda             220 Jan  6  2022 /home/yoda/.bash_logout
+  2131493      4 -rw-r--r--   1 yoda     yoda            3771 Jan  6  2022 /home/yoda/.bashrc
+  2131494      4 -rw-r--r--   1 yoda     yoda             807 Jan  6  2022 /home/yoda/.profile
+  2131488      4 -rw-r--r--   1 tiger    tiger            220 Jan  6  2022 /home/tiger/.bash_logout
+  2131489      4 -rw-r--r--   1 tiger    tiger           3771 Jan  6  2022 /home/tiger/.bashrc
+  2131490      4 -rw-r--r--   1 tiger    tiger            807 Jan  6  2022 /home/tiger/.profile
+  2103101      4 -rw-r--r--   1 ubuntu   ubuntu           220 Jan  6  2022 /home/ubuntu/.bash_logout
+  2103102      4 -rw-r--r--   1 ubuntu   ubuntu          3771 Jan  6  2022 /home/ubuntu/.bashrc
+  2103103      4 -rw-r--r--   1 ubuntu   ubuntu           807 Jan  6  2022 /home/ubuntu/.profile
+  2128441      4 -rw-r--r--   1 dennis   dennis           220 Jan  6  2022 /home/dennis/.bash_logout
+  2122187      4 -rw-------   1 dennis   dennis           100 Jul 17 15:27 /home/dennis/.ssh/authorized_keys
+  2128444      4 -rw-r--r--   1 dennis   dennis          3771 Jan  6  2022 /home/dennis/.bashrc
+  2128445      4 -rw-r--r--   1 dennis   dennis           807 Jan  6  2022 /home/dennis/.profile
+  2131476      4 -rw-r--r--   1 sandy    sandy            220 Jan  6  2022 /home/sandy/.bash_logout
+  2131477      4 -rw-r--r--   1 sandy    sandy           3771 Jan  6  2022 /home/sandy/.bashrc
+  2131478      4 -rw-r--r--   1 sandy    sandy            807 Jan  6  2022 /home/sandy/.profile
+  2131430      4 -rw-r--r--   1 snibbles snibbles         220 Jan  6  2022 /home/snibbles/.bash_logout
+  2131431      4 -rw-r--r--   1 snibbles snibbles        3771 Jan  6  2022 /home/snibbles/.bashrc
+  2131432      4 -rw-r--r--   1 snibbles snibbles         807 Jan  6  2022 /home/snibbles/.profile
+  2131484      4 -rw-r--r--   1 cindy    cindy            220 Jan  6  2022 /home/cindy/.bash_logout
+  2131485      4 -rw-r--r--   1 cindy    cindy           3771 Jan  6  2022 /home/cindy/.bashrc
+  2131486      4 -rw-r--r--   1 cindy    cindy            807 Jan  6  2022 /home/cindy/.profile
+/home/dennis/.ssh/authorized_keys
+-----------------------
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG4rT3vTt99Ox5kndS4HmgTrKBT8SKzhK4rhGkEVGlCI student@generic-vm
+-------------
+/home/remoteadmin/.ssh/authorized_keys
+-----------------------
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILdHjp4NhZvKXRmBUWBeai8iwaZQJkZbDOCWXn4UdCbi zamir@pc200560007
+-------------
+------------------------------
+
