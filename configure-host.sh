@@ -1,6 +1,8 @@
 #!/bin/bash
 
+
 # Function to log messages if verbose mode is enabled
+#
 log_message() {
     logger -t configure-host.sh "$1"
     [ "$verbose" == true ] && echo "$1"
