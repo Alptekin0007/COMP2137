@@ -1,0 +1,35 @@
+- name: Install and configure Apache2 on target1
+  hosts: target1-mgmt
+  remote_user: remoteadmin
+  tasks:
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Ensure apache2 is running and enabled
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+    
+    - name: Install ufw
+      apt:
+        name: ufw
+        state: present
+
+    - name: Enable UFW firewall
+      ufw:
+        state: enabled
+
+    - name: Allow SSH through UFW
+      ufw:
+        rule: allow
+        name: OpenSSH
+
+    - name: Allow HTTP through UFW
+      ufw:
+        rule: allow
+        port: 80
+        proto: tcp
